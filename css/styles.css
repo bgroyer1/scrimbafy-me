@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -13,11 +13,16 @@ body {
     Typography 
    ================= */
 
+h1, 
+.top-text,
+.beta-text {
+  text-shadow: 0 1px #816fca;
+}
+
 h1 {
   font-weight: 400;
   font-size: 2rem;
   padding: 0 1rem;
-  text-shadow: 0 2px #816fca;
 }
 
 h2 {
@@ -79,6 +84,7 @@ p {
   justify-content: space-between;
   align-items: center;
   min-height: 250px;
+  padding-bottom: 0.25em;
 }
 
 /* ====================
@@ -90,6 +96,11 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 2.5em 2em;
+}
+
+.main-content p,
+.main-content form {
+  max-width: 450px;
 }
 
 .img-main {
@@ -159,7 +170,12 @@ input:hover {
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 3vw;
+    margin: 0.625rem 0;
+  }
+
+  .main-content p {
+    margin-top: 0;
   }
 
   .beta-text {
