@@ -47,7 +47,7 @@ p {
 
 .intro {
   color: #fff;
-  background-color: #9480e4;
+  background: #9480e4 url('../images/intro-bg.png') no-repeat center center /cover;
   display: flex;
   flex-direction: column;
   text-align: center;
