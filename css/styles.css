@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   color: #404040;
@@ -41,13 +45,20 @@ p {
   margin-bottom: 0.5em;
 }
 
+.fine-print {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #858585;
+}
+
 /* =================
     Intro
    ================= */
 
 .intro {
   color: #fff;
-  background: #9480e4 url('../images/intro-bg.png') no-repeat center center /cover;
+  background: #9480e4 url("../images/intro-bg.png") no-repeat center center /
+    cover;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -75,46 +86,91 @@ p {
     Form
    ================= */
 
+input,
+button {
+  font-family: inherit;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  padding: 0.5em;
+  margin-bottom: 0.75em;
+  border: 2px solid #d1d5db;
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  border-color: #8a71ec;
+  background-color: #e6e8ec;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1em 0;
+  border: 2px solid;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #8a71ec;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #fff;
+  outline: none;
+  color: #8a71ec;
+  border: 2px solid #8a71ec;
+}
+
 /* =================
     Media queries 
    ================= */
 
-  @media (min-width: 576px) {
-    body {
-      display: flex;
-    }
-
-    h1 {
-      font-size: 5vw;
-      padding: 0 ;
-    }
-
-    h2 {
-      font-size: 4vw;
-    }
-
-    .beta-text {
-      font-size: 1.25rem;
-    }    
-
-    .intro,
-    .main-content {
-      flex-basis: 50%;
-    }
-
-    .intro {
-      min-height: 100vh;
-    }
-
-    .main-content {
-      justify-content: center;
-      padding: 0 2em;
-    }
+@media (min-width: 576px) {
+  body {
+    display: flex;
   }
 
-  @media (min-width: 1100px) {
-    h1 {
-      padding: 0 1em;
-
-    }
+  h1 {
+    font-size: 5vw;
+    padding: 0;
   }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .beta-text {
+    font-size: 1.25rem;
+  }
+
+  .intro,
+  .main-content {
+    flex-basis: 50%;
+  }
+
+  .intro {
+    min-height: 100vh;
+  }
+
+  .main-content {
+    align-items: center;
+    max-width: 620px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 0 2em;
+  }
+}
+
+@media (min-width: 1100px) {
+  h1 {
+    padding: 0 1em;
+  }
+}
