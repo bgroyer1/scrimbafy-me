@@ -31,9 +31,12 @@ p {
 }
 
 .beta-text,
-.subheading {
+.subheading,
+.top-text {
   text-transform: uppercase;
+  font-weight: 900;
 }
+
 
 .beta-text {
   font-weight: 900;
@@ -43,12 +46,23 @@ p {
   color: #575757;
   font-weight: 900;
   margin-bottom: 0.5em;
+  order: 1;
 }
 
 .fine-print {
   font-size: 0.75rem;
   letter-spacing: 1px;
   color: #858585;
+}
+
+.top-text {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding-top: 0.25em;
+  border-top: 0.5rem solid;
+  order: -1;
+  margin-top: 0;
+  align-self: center;
 }
 
 /* =================
@@ -62,7 +76,8 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   min-height: 250px;
 }
 
